@@ -13,9 +13,9 @@ const path = require('path');
 app.use(express.static(path.join(__dirname, 'public')));
 
 //knex
-// const environment = process.env.NODE_ENV || 'development';
-// const configuration = require('./knexfile')[environment];
-// const database = require('knex')(configuration);
+const environment = process.env.NODE_ENV || 'development';
+const configuration = require('./knexfile')[environment];
+const database = require('knex')(configuration);
 
 
 app.locals.title = 'Amazon Bay';
@@ -27,6 +27,16 @@ app.get('/test', (request, response) => {
 app.get('/', (request, response) => {
   // response is actually handled by static asset express middleware
   // defined by app.use(express.static(__dirname + '/public'));
+});
+
+app.get('/api/v1/items', (request, response) => {
+  database('items').select()
+    .then((items) => {
+      response.status(200).json(items);
+    })
+    .catch((error) => {
+      response.status(500).json({ error });
+    });
 });
 
 app.listen(app.get('port'), () => {
