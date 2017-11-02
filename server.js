@@ -17,7 +17,7 @@ const environment = process.env.NODE_ENV || 'development';
 const configuration = require('./knexfile')[environment];
 const database = require('knex')(configuration);
 
-
+// app.use(express.favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 app.locals.title = 'Amazon Bay';
 
 app.get('/test', (request, response) => {
