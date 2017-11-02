@@ -60,6 +60,21 @@ const addItemToCart = (cartBtn) => {
   
 }
 
+const calcCartTotal = () => {
+  let currentCart = getFromLocal('abcart');
+  let totalPrice = 0.0;
+
+  if (currentCart.length > 0) {
+    totalPrice = currentCart.reduce((acum, item) => {
+      acum += parseFloat(item.price);
+      return acum;
+    }, 0.0);
+  }
+
+  $('.cart-price-val').text(totalPrice.toFixed(2))
+
+
+}
 
 const itemFactory = (item) => {
   let newItem = document.createElement('div');
@@ -187,8 +202,8 @@ const openCart = () => {
     $('.cart-items-wrapper').append(blankCart)
   }
 
-
-
+  //refresh cart total
+  calcCartTotal();
 
   document.getElementById('cart-pane').style.width = '600px';
 }
