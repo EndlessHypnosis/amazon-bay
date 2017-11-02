@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <link href="http://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
   <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,500,500i,700,700i" rel="stylesheet">
   <link href="http://fonts.googleapis.com/css?family=Nova+Square" rel="stylesheet">
@@ -23,21 +22,22 @@
 <body>
 
   
-  <aside>Order History</aside>
+  <aside class='aside-history'>Order History</aside>
 
-  <section>
+  <section class='section-main'>
     <h1>Amazon Bay</h1>
 
     <div class='inventory-wrapper'>
+
       <div class='item-wrapper'>
         <div class='item-details'>
           <p class='item-detail-title'>Title</p>
           <p class='item-detail-desc'><span>Description:</span>The desc here</p>
-          <img class='item-detail-img' src="http://images-na.ssl-images-amazon.com/images/I/81OEdVr5KzL._SL1500_.jpg" alt="picture of headphones">
-          <p class='item-detail-price'><span>Price: </span><i class="icon ion-social-usd-outline"></i>123.45</p>
+          <img class='item-detail-img' src='http://images-na.ssl-images-amazon.com/images/I/81OEdVr5KzL._SL1500_.jpg' alt='picture of headphones'>
+          <p class='item-detail-price'><span>Price: </span><i class='icon ion-social-usd'></i>123.45</p>
         </div>
         <div class='item-button'>
-          <input class='btn-add-to-cart' type="button" value="Add to Cart" />
+          <input class='btn-add-to-cart' type='button' value='Add to Cart' />
         </div>
       </div>
 
@@ -45,12 +45,12 @@
     
   </section>
 
-  <aside>Shopping Cart</aside>
+  <aside class='aside-cart'>Shopping Cart</aside>
 
 
-  <select id='select-item-list' />
+  <select style="display:none;" id='select-item-list' />
 
-  <input type='button' id='btn-test' value='hithere'></input>
+  <input style="display:none;" type='button' id='btn-test' value='hithere'></input>
 
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>

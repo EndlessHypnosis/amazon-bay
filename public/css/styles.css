@@ -6,13 +6,93 @@
 
 
 
-.app-core {
+body {
   font-size: 16px;
   font-family: 'Ubuntu', sans-serif;
-  color: #727578;
+  background-color: #2c2c2c;
+  color: #f9f9f9;
   display: flex;
   width: 100vw;
 }
+
+
+.aside-history {
+
+}
+
+.section-main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aside-cart {
+
+}
+
+.item-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #5C7080;
+  margin: 15px;
+  border: 1px solid #5C7080;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2), 0 2px 10px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.item-details {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+
+.another {
+  font-family: 'Roboto', sans-serif;
+  /* ["#FFEEC5 ", "#F1AEA4 ", "#D37387 ", "#A3416E ", "#5C255C "] */
+  /* ["#1F4B99 ", "#6CACB9 ", "#FFFFFF ", "#DF9563 ", "#9E2B0E "] */
+}
+
+h1 {
+  font-family: 'Nova Square', cursive;
+}
+
+.item-detail-img {
+  width: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.end {
+
+}
+
+
+
+
 
 
 .app-wrapper {
@@ -93,43 +173,3 @@
     color: darkslategray;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-.item-detail-img {
-  width: 200px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.end {
-
-}
