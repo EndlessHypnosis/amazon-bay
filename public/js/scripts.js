@@ -19,6 +19,7 @@ const getFromLocal = (key) => {
 
 
 const addItemToCart = (cartBtn) => {
+  closeCart();
   console.log('what is cart button', cartBtn);
 
   let itemId = $(cartBtn).data('itemid')
@@ -158,19 +159,23 @@ const getInventoryItems = () => {
 
 
 const openHistory = () => {
-  document.getElementById('history-pane').style.width = '500px';
+  document.getElementById('history-pane').style.width = '600px';
 }
 
 const closeHistory = () => {
   document.getElementById('history-pane').style.width = '0';
 }
 
-const openCart = () => {
+const clearCart = () => {
+  addToLocal([], 'abcart');
+  openCart();
+}
 
+const openCart = () => {
 
   let currentCart = getFromLocal('abcart');
 
-  $('.inventory-wrapper').children().remove();
+  $('.cart-items-wrapper').children().remove();
 
   if (currentCart.length > 0) {
     currentCart.forEach(item => {
@@ -178,14 +183,14 @@ const openCart = () => {
     })
 
   } else {
-    let blankCart = $('<div>No Items in Cart</div>');
+    let blankCart = $(`<div class='no-cart-items'>No Items in Cart</div>`);
     $('.cart-items-wrapper').append(blankCart)
   }
 
 
 
 
-  document.getElementById('cart-pane').style.width = '500px';
+  document.getElementById('cart-pane').style.width = '600px';
 }
 
 const closeCart = () => {
