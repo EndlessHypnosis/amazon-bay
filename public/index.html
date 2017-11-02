@@ -58,18 +58,40 @@
   <aside id='cart-pane' class='aside-cart'>
     <a href="javascript:void(0)" class="close-btn-cart" onclick="closeCart()">&times;</a>
     
-    <h3>
-      Shopping Cart
-    </h3>
+    <div class='cart-content'>
+      
+      <h2 class='cart-header'>
+        Shopping Cart
+      </h2>
 
+      <p class='cart-items-header'>Items in Cart</p>
+      <div class='cart-items-wrapper'>
+        <!-- <div class='cart-item'>
+          <p class='cart-item-title'>This is a cart item 1</p>
+          <p class='cart-item-price'>
+            <span>Price:</span>
+            <i class='icon ion-social-usd'></i>12.99</p>
+        </div>
+        <div class='cart-item'>
+          <p class='cart-item-title'>This is a cart item 2</p>
+          <p class='cart-item-price'>
+            <span>Price:</span>
+            <i class='icon ion-social-usd'></i>1.99</p>
+        </div> -->
+      </div>
+
+      <p class='cart-price-total'><span>Total Cart Price:</span><i class='icon ion-social-usd'></i>123.45</p>
+      
+      <input class='btn-checkout' type='button' value='Checkout' />
+
+      <input class='btn-clear' type='button' value='Clear Cart Items' />
     
+
+    </div>
+
 
   </aside>
 
-
-  <select style="display:none;" id='select-item-list' />
-
-  <input style="display:none;" type='button' id='btn-test' value='hithere'></input>
 
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>

@@ -15,6 +15,15 @@ body {
   width: 100%;
 }
 
+
+h1 {
+  font-family: 'Nova Square', cursive;
+  color: #918ADF;
+  text-decoration: underline;
+  text-shadow: 2px 2px 6px #2c2c2c;
+}
+
+
 /* ASIDE HISTORY */
 
 .aside-history {
@@ -201,35 +210,118 @@ body {
 }
 
 
-.another {
-  font-family: 'Roboto', sans-serif;
-  /* ["#FFEEC5 ", "#F1AEA4 ", "#D37387 ", "#A3416E ", "#5C255C "] */
-  /* ["#1F4B99 ", "#6CACB9 ", "#FFFFFF ", "#DF9563 ", "#9E2B0E "] */
+
+
+/* SHOPPING CART */
+
+.cart-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
-h1 {
-  font-family: 'Nova Square', cursive;
-  color: #918ADF;
-  text-decoration: underline;
-  text-shadow: 2px 2px 6px #2c2c2c;
+.cart-header {
+  color: #BFCCD6;
+  align-self: center;
+}
+
+.cart-items-header {
+  color: #BFCCD6;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin: 40px 0 5px 0;
+
+}
+
+.cart-items-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0 0 0;
+  border: 1px solid rgb(112, 134, 151);
+  border-radius: 5px;
+}
+
+.cart-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 10px;
+  border-bottom: 1px solid rgb(112, 134, 151);
+  padding-bottom: 10px;
+}
+
+.cart-item:last-child {
+  border-bottom: 0;
+}
+
+.cart-item-title {
+  font-weight: bold;
+  padding-left: 5px;
+}
+
+.cart-item-price {
+  color: #BFCCD6;
+  width: 130px;
+  padding-right: 5px;
+}
+
+.cart-item-price span {
+  font-weight: bold;
+  font-size: 18px;
+  margin-right: 5px;
+  color: #98abb9;
+}
+
+.cart-price-total {
+  margin: 30px 0 20px 0;
+  font-size: 20px;
+  color: #FFFFFF;
+}
+
+.cart-price-total span {
+  font-weight: bold;
+  font-size: 22px;
+  color: #98abb9;
+  margin-right: 10px;
+}
+
+.btn-checkout {
+  outline: none;
+  cursor: pointer;
+  border: 1px solid #738694;
+  border-radius: 3px;
+  background-color: #BFCCD6;
+  color: #5C7080;
+  padding: 5px;
+  transition: 0.3s;
+  align-self: center;
+  width: 50%;
+}
+
+.btn-checkout:hover {
+  background-color: #98abb9;
+  color: #2c2c2c;
 }
 
 
+.btn-clear {
+  outline: none;
+  cursor: pointer;
+  border: 1px solid #BFCCD6;
+  border-radius: 3px;
+  background-color: #738694;
+  color: #2c2c2c;
+  margin: 20px 5px;
+  padding: 5px;
+  transition: 0.3s;
+  align-self: center;
+  width: 50%;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.btn-clear:hover {
+  background-color: #98abb9;
+  color: #2c2c2c;
+}
 
 
 
