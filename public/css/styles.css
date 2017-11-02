@@ -1,0 +1,94 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.app-core {
+  font-size: 16px;
+  font-family: 'Ubuntu', sans-serif;
+  color: #727578;
+  display: flex;
+  width: 100vw;
+}
+
+
+.app-wrapper {
+  min-width: 945px;
+  max-width: 945px;
+  min-height: 100vh;
+  margin: 30px auto;
+  background-color: #ffffff;
+  
+  box-shadow: 0px 0px 10px 2px rgba(119, 119, 119, 0.8);
+  -moz-box-shadow: 0px 0px 10px 2px rgba(119, 119, 119, 0.8);
+  -webkit-box-shadow: 0px 0px 10px 2px rgba(119, 119, 119, 0.8);
+
+  opacity: 0.9;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.holygrail-header {
+  min-width: 945px;
+  min-height: 312px;
+  background-color: #ffffff;
+  opacity: 0.85;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.holygrail-header h1 {
+  margin: 70px auto;
+  color: orangered;
+}
+
+.holygrail-body {
+  display: flex;
+  flex: 1;
+}
+
+.holygrail-content {
+  flex: 1;
+}
+
+.holygrail-left, .holygrail-right {
+  flex: 0 0 12em;
+}
+
+.holygrail-left {
+  order: -1;
+  margin-left: 10px;
+}
+
+.holygrail-footer {
+  min-width: 945px;
+  min-height: 223px;
+  background-color: #ffffff;
+
+  opacity: 0.85;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-span {
+  padding-top: 190px;
+  padding-left: 20px;
+}
+
+.ubuntu-dark-small {
+  font-family: 'Ubuntu', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: darkslategray;
+}
