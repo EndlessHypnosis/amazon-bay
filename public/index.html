@@ -22,9 +22,35 @@
 
 <body>
 
-  <h1>Amazon Bay (home page)</h1>
+  
+  <aside>Order History</aside>
+
+  <section>
+    <h1>Amazon Bay</h1>
+
+    <div class='inventory-wrapper'>
+      <div class='item-wrapper'>
+        <div class='item-details'>
+          <p class='item-detail-title'>Title</p>
+          <p class='item-detail-desc'><span>Description:</span>The desc here</p>
+          <img class='item-detail-img' src="http://images-na.ssl-images-amazon.com/images/I/81OEdVr5KzL._SL1500_.jpg" alt="picture of headphones">
+          <p class='item-detail-price'><span>Price: </span><i class="icon ion-social-usd-outline"></i>123.45</p>
+        </div>
+        <div class='item-button'>
+          <input class='btn-add-to-cart' type="button" value="Add to Cart" />
+        </div>
+      </div>
+
+    </div>
+    
+  </section>
+
+  <aside>Shopping Cart</aside>
+
 
   <select id='select-item-list' />
+
+  <input type='button' id='btn-test' value='hithere'></input>
 
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>

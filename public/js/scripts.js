@@ -53,8 +53,6 @@ const getItems = () => {
     }
 
 
-    
-
 
 }
 
@@ -68,4 +66,4 @@ const testme = (e) => {
 
 // Event Listeners
 
-$('#btn-test').on('click', testme);
+$('#btn-test').click(testme);
