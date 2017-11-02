@@ -93,6 +93,22 @@ const getItems = () => {
 }
 
 
+const openHistory = () => {
+  document.getElementById('history-pane').style.width = '650px';
+}
+
+const closeHistory = () => {
+  document.getElementById('history-pane').style.width = '0';
+}
+
+const openCart = () => {
+  document.getElementById('cart-pane').style.width = '650px';
+}
+
+const closeCart = () => {
+  document.getElementById('cart-pane').style.width = '0';
+}
+
 
 const testme = (e) => {
   console.log('E:', e.target);

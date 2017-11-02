@@ -15,16 +15,89 @@ body {
   width: 100%;
 }
 
+/* ASIDE HISTORY */
 
 .aside-history {
-
+  height: 100%;
+  /* width: 200px; // for always show */
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #5C7080;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+  color: #2c2c2c;
+  box-shadow: 4px 0px 7px 0px rgba(50, 50, 50, 0.75);
 }
+
+.close-btn-history {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  color: #BFCCD6;
+  display: block;
+  transition: 0.3s;
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.close-btn-history:hover {
+  color: #2c2c2c;
+}
+
+
+
+
+/* ASIDE CART */
+
+.aside-cart {
+  height: 100%;
+  /* width: 200px; // for always show */
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #5C7080;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+  color: #2c2c2c;
+  box-shadow: -4px 0px 7px 0px rgba(50, 50, 50, 0.75);
+}
+
+.close-btn-cart {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  color: #BFCCD6;
+  display: block;
+  transition: 0.3s;
+  position: absolute;
+  top: 0;
+  left: 25px;
+  font-size: 36px;
+  margin-right: 50px;
+}
+
+.close-btn-cart:hover {
+  color: #2c2c2c;
+}
+
+
+/* INVENTORY */
 
 .section-main {
   display: flex;
   flex: 1;
   flex-direction: column;
   align-items: center;
+  /* margin-left: 200px; // for always show */
+  margin-left: 0;
 }
 
 .aside-cart {
@@ -76,6 +149,7 @@ body {
 
 .item-detail-desc {
   color: #918ADF;
+  font-family: 'Roboto', sans-serif;
 }
 
 .item-detail-desc span {
@@ -83,6 +157,7 @@ body {
   font-size: 18px;
   margin-right: 5px;
   color: #6565C5;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .item-detail-img {
@@ -117,6 +192,7 @@ body {
   background-color: #BFCCD6;
   color: #5C7080;
   padding: 5px;
+  transition: 0.3s;
 }
 
 .btn-add-to-cart:hover {
@@ -133,6 +209,9 @@ body {
 
 h1 {
   font-family: 'Nova Square', cursive;
+  color: #918ADF;
+  text-decoration: underline;
+  text-shadow: 2px 2px 6px #2c2c2c;
 }
 
 
