@@ -1,6 +1,6 @@
 $(document).ready(function () {
   // do initializing stuff here
-  getItems();
+  getInventoryItems();
 });
 
 
@@ -18,6 +18,44 @@ const pullFromLocal = () => {
 
 
 
+
+const itemFactory = (item) => {
+  let newItem = document.createElement('div');
+  newItem.className = 'item-wrapper';
+  newItem.id = item.id;
+  newItem.innerHTML = `
+    <div class='item-details'>
+      <p class='item-detail-title'>${item.title}</p>
+      <img class='item-detail-img' src='${item.imageUrl}' alt='picture of headphones'>
+      <p class='item-detail-desc'><span>Description:</span>${item.description}</p>
+      <p class='item-detail-price'><span>Price: </span><i class='icon ion-social-usd'></i>${item.price}</p>
+    </div>
+    <div class='item-button'>
+      <input class='btn-add-to-cart' type='button' value='Add to Cart' />
+    </div>
+  `;
+  return newItem;
+}
+
+
+const getInventoryItems = () => {
+  fetch('/api/v1/items')
+    .then(result => result.json())
+    .then(items => {
+      // add to local storage
+      // addToLocal(items);
+
+      $('.inventory-wrapper').children().remove();
+
+      // refactor to use fragments or the like
+      items.forEach(item => {
+        $('.inventory-wrapper').append(itemFactory(item))
+      })
+
+
+    })
+    .catch(error => { console.log('Error getting items:', error) })
+}
 
 
 const getItems = () => {
@@ -52,10 +90,6 @@ const getItems = () => {
     });
     }
 
-
-    
-
-
 }
 
 
@@ -68,4 +102,4 @@ const testme = (e) => {
 
 // Event Listeners
 
-$('#btn-test').on('click', testme);
+$('#btn-test').click(testme);
