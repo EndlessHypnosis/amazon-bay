@@ -17,17 +17,7 @@ const environment = process.env.NODE_ENV || 'development';
 const configuration = require('./knexfile')[environment];
 const database = require('knex')(configuration);
 
-// app.use(express.favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 app.locals.title = 'Amazon Bay';
-
-app.get('/test', (request, response) => {
-  response.send('IT WORKS');
-});
-
-app.get('/', (request, response) => {
-  // response is actually handled by static asset express middleware
-  // defined by app.use(express.static(__dirname + '/public'));
-});
 
 app.get('/api/v1/items', (request, response) => {
   database('items').select()
@@ -38,6 +28,31 @@ app.get('/api/v1/items', (request, response) => {
       response.status(500).json({ error });
     });
 });
+
+
+app.post('/api/v1/orders', (request, response) => {
+  const { orderTotal } = request.body;
+
+  if (!orderTotal || !(orderTotal > 0.0)) {
+    return response
+      .status(422)
+      .json({
+        status: 422,
+        error: 'Order not saved. Invalid order total'
+      });
+  }
+
+  database('orders').insert({
+    totalPrice: orderTotal
+  }, '*')
+  .then(orders => {
+    response.status(201).json(Object.assign({ status: 201 }, orders[0]));
+  })
+  .catch(error => {
+    response.status(500).json(Object.assign({ status: 500 }, { error }));
+  });
+});
+
 
 app.listen(app.get('port'), () => {
   console.log(`${app.locals.title} is running on ${app.get('port')}.`);

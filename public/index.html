@@ -22,14 +22,24 @@
 <body>
 
   
-  <aside class='aside-history'>Order History</aside>
+  <aside id='history-pane' class='aside-history'>
+    
+    <a href="javascript:void(0)" class="close-btn-history" onclick="closeHistory()">&times;</a>
+
+    <h3>
+      Order History
+    </h3>
+
+  </aside>
 
   <section class='section-main'>
     <h1>Amazon Bay</h1>
+    <span onclick="openHistory()">open history</span>
+    <span onclick="openCart()">open cart</span>
 
     <div class='inventory-wrapper'>
 
-      <div class='item-wrapper'>
+      <!-- <div class='item-wrapper'>
         <div class='item-details'>
           <p class='item-detail-title'>This is a sample title</p>
           <img class='item-detail-img' src='http://images-na.ssl-images-amazon.com/images/I/81OEdVr5KzL._SL1500_.jpg' alt='picture of headphones'>
@@ -39,18 +49,49 @@
         <div class='item-button'>
           <input class='btn-add-to-cart' type='button' value='Add to Cart' />
         </div>
-      </div>
+      </div> -->
 
     </div>
     
   </section>
 
-  <aside class='aside-cart'>Shopping Cart</aside>
+  <aside id='cart-pane' class='aside-cart'>
+    <a href="javascript:void(0)" class="close-btn-cart" onclick="closeCart()">&times;</a>
+    
+    <div class='cart-content'>
+      
+      <h2 class='cart-header'>
+        Shopping Cart
+      </h2>
+
+      <p class='cart-items-header'>Items in Cart</p>
+      <div class='cart-items-wrapper'>
+        <!-- <div class='cart-item'>
+          <p class='cart-item-title'>This is a cart item 1</p>
+          <p class='cart-item-price'>
+            <span>Price:</span>
+            <i class='icon ion-social-usd'></i>12.99</p>
+        </div>
+        <div class='cart-item'>
+          <p class='cart-item-title'>This is a cart item 2</p>
+          <p class='cart-item-price'>
+            <span>Price:</span>
+            <i class='icon ion-social-usd'></i>1.99</p>
+        </div> -->
+      </div>
+
+      <p class='cart-price-total'><span>Total Cart Price:</span><i class='icon ion-social-usd'></i><span class='cart-price-val'></span></p>
+      
+      <input class='btn-checkout' type='button' value='Checkout' onclick='cartCheckout()' />
+
+      <input class='btn-clear' type='button' value='Clear Cart Items' onclick='clearCart()' />
+    
+
+    </div>
 
 
-  <select style="display:none;" id='select-item-list' />
+  </aside>
 
-  <input style="display:none;" type='button' id='btn-test' value='hithere'></input>
 
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
