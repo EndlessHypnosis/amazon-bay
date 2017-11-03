@@ -39,7 +39,6 @@ app.get('/api/v1/orders', (request, response) => {
     });
 });
 
-
 app.post('/api/v1/orders', (request, response) => {
   const { orderTotal } = request.body;
 
@@ -62,7 +61,6 @@ app.post('/api/v1/orders', (request, response) => {
     response.status(500).json(Object.assign({ status: 500 }, { error }));
   });
 });
-
 
 app.listen(app.get('port'), () => {
   console.log(`${app.locals.title} is running on ${app.get('port')}.`);
