@@ -211,6 +211,48 @@ h1 {
 
 
 
+/* ORDER HISTORY */
+
+
+.history-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.history-header {
+  color: #BFCCD6;
+  align-self: center;
+}
+
+.history-orders-header {
+  color: #BFCCD6;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin: 40px 0 5px 0;
+
+}
+
+.history-orders-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0 0 0;
+  border: 1px solid rgb(112, 134, 151);
+  border-radius: 5px;
+}
+
+.order-item-date {
+  color: #BFCCD6;
+  width: 350px;
+  padding-right: 5px;
+}
+
+.order-item-date span {
+  font-weight: bold;
+  font-size: 18px;
+  margin-right: 5px;
+  color: #98abb9;
+}
 
 /* SHOPPING CART */
 

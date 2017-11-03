@@ -23,12 +23,18 @@
 
   
   <aside id='history-pane' class='aside-history'>
-    
     <a href="javascript:void(0)" class="close-btn-history" onclick="closeHistory()">&times;</a>
 
-    <h3>
-      Order History
-    </h3>
+    <div class='history-content'>
+
+      <h2 class='history-header'>
+        Order History
+      </h2>
+      
+      <p class='history-orders-header'>Orders</p>
+      <div class='history-orders-wrapper'></div>
+
+    </div>
 
   </aside>
 
@@ -37,21 +43,7 @@
     <span onclick="openHistory()">open history</span>
     <span onclick="openCart()">open cart</span>
 
-    <div class='inventory-wrapper'>
-
-      <!-- <div class='item-wrapper'>
-        <div class='item-details'>
-          <p class='item-detail-title'>This is a sample title</p>
-          <img class='item-detail-img' src='http://images-na.ssl-images-amazon.com/images/I/81OEdVr5KzL._SL1500_.jpg' alt='picture of headphones'>
-          <p class='item-detail-desc'><span>Description:</span>The desc here</p>
-          <p class='item-detail-price'><span>Price: </span><i class='icon ion-social-usd'></i>123.45</p>
-        </div>
-        <div class='item-button'>
-          <input class='btn-add-to-cart' type='button' value='Add to Cart' />
-        </div>
-      </div> -->
-
-    </div>
+    <div class='inventory-wrapper'></div>
     
   </section>
 
@@ -65,20 +57,7 @@
       </h2>
 
       <p class='cart-items-header'>Items in Cart</p>
-      <div class='cart-items-wrapper'>
-        <!-- <div class='cart-item'>
-          <p class='cart-item-title'>This is a cart item 1</p>
-          <p class='cart-item-price'>
-            <span>Price:</span>
-            <i class='icon ion-social-usd'></i>12.99</p>
-        </div>
-        <div class='cart-item'>
-          <p class='cart-item-title'>This is a cart item 2</p>
-          <p class='cart-item-price'>
-            <span>Price:</span>
-            <i class='icon ion-social-usd'></i>1.99</p>
-        </div> -->
-      </div>
+      <div class='cart-items-wrapper'></div>
 
       <p class='cart-price-total'><span>Total Cart Price:</span><i class='icon ion-social-usd'></i><span class='cart-price-val'></span></p>
       

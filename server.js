@@ -29,6 +29,16 @@ app.get('/api/v1/items', (request, response) => {
     });
 });
 
+app.get('/api/v1/orders', (request, response) => {
+  database('orders').select()
+    .then((orders) => {
+      response.status(200).json(orders);
+    })
+    .catch((error) => {
+      response.status(500).json({ error });
+    });
+});
+
 
 app.post('/api/v1/orders', (request, response) => {
   const { orderTotal } = request.body;
