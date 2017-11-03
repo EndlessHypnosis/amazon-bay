@@ -234,7 +234,7 @@ const getInventoryItems = () => {
 
 
 const openHistory = () => {
-
+  closeCart();
   fetch('/api/v1/orders')
     .then(result => result.json())
     .then(orders => {
@@ -261,7 +261,7 @@ const clearCart = () => {
 }
 
 const openCart = () => {
-
+  closeHistory();
   let currentCart = getFromLocal('abcart');
 
   $('.cart-items-wrapper').children().remove();

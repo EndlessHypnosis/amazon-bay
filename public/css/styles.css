@@ -109,6 +109,29 @@ h1 {
   margin-left: 0;
 }
 
+.btn-group {
+  display: flex;
+  width: 700px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.btn-group span {
+  outline: none;
+  cursor: pointer;
+  border: 1px solid #6565C5;
+  border-radius: 3px;
+  background-color: #BFCCD6;
+  color: #2c2c2c;
+  padding: 10px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+.btn-group span:hover {
+  background-color: #918ADF;
+}
+
 .aside-cart {
 
 }
@@ -211,27 +234,27 @@ h1 {
 
 
 
-/* ORDER HISTORY */
 
-
-.history-content {
+.sidebar-content {
   padding: 20px;
   display: flex;
   flex-direction: column;
 }
 
-.history-header {
+.sidebar-header {
   color: #BFCCD6;
   align-self: center;
 }
 
-.history-orders-header {
+.sidebar-detail-header {
   color: #BFCCD6;
   font-size: 16px;
   text-transform: uppercase;
   margin: 40px 0 5px 0;
-
+  
 }
+
+/* ORDER HISTORY */
 
 .history-orders-wrapper {
   display: flex;
@@ -256,24 +279,6 @@ h1 {
 
 /* SHOPPING CART */
 
-.cart-content {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-}
-
-.cart-header {
-  color: #BFCCD6;
-  align-self: center;
-}
-
-.cart-items-header {
-  color: #BFCCD6;
-  font-size: 16px;
-  text-transform: uppercase;
-  margin: 40px 0 5px 0;
-
-}
 
 .cart-items-wrapper {
   display: flex;

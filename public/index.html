@@ -25,13 +25,13 @@
   <aside id='history-pane' class='aside-history'>
     <a href="javascript:void(0)" class="close-btn-history" onclick="closeHistory()">&times;</a>
 
-    <div class='history-content'>
+    <div class='sidebar-content'>
 
-      <h2 class='history-header'>
+      <h2 class='sidebar-header'>
         Order History
       </h2>
       
-      <p class='history-orders-header'>Orders</p>
+      <p class='sidebar-detail-header'>Orders</p>
       <div class='history-orders-wrapper'></div>
 
     </div>
@@ -40,8 +40,12 @@
 
   <section class='section-main'>
     <h1>Amazon Bay</h1>
-    <span onclick="openHistory()">open history</span>
-    <span onclick="openCart()">open cart</span>
+
+    <div class='btn-group'>
+      <span onclick="openHistory()">View Order History</span>
+      <span onclick="openCart()">Open Shopping Cart</span>
+    </div>
+
 
     <div class='inventory-wrapper'></div>
     
@@ -50,13 +54,13 @@
   <aside id='cart-pane' class='aside-cart'>
     <a href="javascript:void(0)" class="close-btn-cart" onclick="closeCart()">&times;</a>
     
-    <div class='cart-content'>
+    <div class='sidebar-content'>
       
-      <h2 class='cart-header'>
+      <h2 class='sidebar-header'>
         Shopping Cart
       </h2>
 
-      <p class='cart-items-header'>Items in Cart</p>
+      <p class='sidebar-detail-header'>Items in Cart</p>
       <div class='cart-items-wrapper'></div>
 
       <p class='cart-price-total'><span>Total Cart Price:</span><i class='icon ion-social-usd'></i><span class='cart-price-val'></span></p>
