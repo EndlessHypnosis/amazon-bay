@@ -1,84 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  <link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,500,500i,700,700i" rel="stylesheet">
-  <link href="http://fonts.googleapis.com/css?family=Nova+Square" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,500,500i,700,700i" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Nova+Square" rel="stylesheet">
 
-  <link href="css/normalize.css" type="text/css" rel="stylesheet">
-  <link href="css/ionicons.css" type="text/css" rel="stylesheet">
-  <link href="css/styles.css" type="text/css" rel="stylesheet">
+    <link href="css/normalize.css" type="text/css" rel="stylesheet">
+    <link href="css/ionicons.css" type="text/css" rel="stylesheet">
+    <link href="css/styles.css" type="text/css" rel="stylesheet">
 
-  <link rel="icon" href="images/favicon.ico">
+    <link rel="icon" href="images/favicon.ico">
 
-  <title>Amazon Bay by Nick Svetnicka</title>
-</head>
+    <title>Amazon Bay by Nick Svetnicka</title>
+  </head>
 
-<body>
-
-  
-  <aside id='history-pane' class='aside-history'>
-    <a href="javascript:void(0)" class="close-btn-history" onclick="closeHistory()">&times;</a>
-
-    <div class='sidebar-content'>
-
-      <h2 class='sidebar-header'>
-        Order History
-      </h2>
-      
-      <p class='sidebar-detail-header'>Orders</p>
-      <div class='history-orders-wrapper'></div>
-
-    </div>
-
-  </aside>
-
-  <section class='section-main'>
-    <h1>Amazon Bay</h1>
-
-    <div class='btn-group'>
-      <span onclick="openHistory()">View Order History</span>
-      <span onclick="openCart()">Open Shopping Cart</span>
-    </div>
-
-
-    <div class='inventory-wrapper'></div>
+  <body>
     
-  </section>
+    <aside id='history-pane' class='aside-history'>
+      <a href="javascript:void(0)" class="close-btn-history" onclick="closeHistory()">&times;</a>
+      <div class='sidebar-content'>
+        <h2 class='sidebar-header'>
+          Order History
+        </h2>
+        <p class='sidebar-detail-header'>Orders</p>
+        <div class='history-orders-wrapper'></div>
+      </div>
+    </aside>
 
-  <aside id='cart-pane' class='aside-cart'>
-    <a href="javascript:void(0)" class="close-btn-cart" onclick="closeCart()">&times;</a>
-    
-    <div class='sidebar-content'>
-      
-      <h2 class='sidebar-header'>
-        Shopping Cart
-      </h2>
+    <section class='section-main'>
+      <h1>Amazon Bay</h1>
+      <div class='btn-group'>
+        <span onclick="openHistory()">View Order History</span>
+        <span onclick="openCart()">Open Shopping Cart</span>
+      </div>
+      <div class='inventory-wrapper'></div>
+    </section>
 
-      <p class='sidebar-detail-header'>Items in Cart</p>
-      <div class='cart-items-wrapper'></div>
+    <aside id='cart-pane' class='aside-cart'>
+      <a href="javascript:void(0)" class="close-btn-cart" onclick="closeCart()">&times;</a>
+      <div class='sidebar-content'>
+        <h2 class='sidebar-header'>
+          Shopping Cart
+        </h2>
+        <p class='sidebar-detail-header'>Items in Cart</p>
+        <div class='cart-items-wrapper'></div>
+        <p class='cart-price-total'><span>Total Cart Price:</span><i class='icon ion-social-usd'></i><span class='cart-price-val'></span></p>
+        <input class='btn-checkout' type='button' value='Checkout' onclick='cartCheckout()' />
+        <input class='btn-clear' type='button' value='Clear Cart Items' onclick='clearCart()' />
+      </div>
+    </aside>
 
-      <p class='cart-price-total'><span>Total Cart Price:</span><i class='icon ion-social-usd'></i><span class='cart-price-val'></span></p>
-      
-      <input class='btn-checkout' type='button' value='Checkout' onclick='cartCheckout()' />
-
-      <input class='btn-clear' type='button' value='Clear Cart Items' onclick='clearCart()' />
-    
-
-    </div>
-
-
-  </aside>
-
-
-
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="js/scripts.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
   </body>
   
-  </html>
+</html>
