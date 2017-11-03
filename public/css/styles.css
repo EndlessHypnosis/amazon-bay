@@ -109,6 +109,29 @@ h1 {
   margin-left: 0;
 }
 
+.btn-group {
+  display: flex;
+  width: 700px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.btn-group span {
+  outline: none;
+  cursor: pointer;
+  border: 1px solid #6565C5;
+  border-radius: 3px;
+  background-color: #BFCCD6;
+  color: #2c2c2c;
+  padding: 10px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+.btn-group span:hover {
+  background-color: #918ADF;
+}
+
 .aside-cart {
 
 }
@@ -212,26 +235,50 @@ h1 {
 
 
 
-/* SHOPPING CART */
-
-.cart-content {
+.sidebar-content {
   padding: 20px;
   display: flex;
   flex-direction: column;
 }
 
-.cart-header {
+.sidebar-header {
   color: #BFCCD6;
   align-self: center;
 }
 
-.cart-items-header {
+.sidebar-detail-header {
   color: #BFCCD6;
   font-size: 16px;
   text-transform: uppercase;
   margin: 40px 0 5px 0;
-
+  
 }
+
+/* ORDER HISTORY */
+
+.history-orders-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0 0 0;
+  border: 1px solid rgb(112, 134, 151);
+  border-radius: 5px;
+}
+
+.order-item-date {
+  color: #BFCCD6;
+  width: 350px;
+  padding-right: 5px;
+}
+
+.order-item-date span {
+  font-weight: bold;
+  font-size: 18px;
+  margin-right: 5px;
+  color: #98abb9;
+}
+
+/* SHOPPING CART */
+
 
 .cart-items-wrapper {
   display: flex;

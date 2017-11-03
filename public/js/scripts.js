@@ -136,6 +136,7 @@ const itemFactory = (item) => {
   return newItem;
 }
 
+//refactor these 2 factories
 const cartFactory = (item) => {
   let cartItem = document.createElement('div');
   cartItem.className = 'cart-item';
@@ -149,6 +150,32 @@ const cartFactory = (item) => {
     </p>
   `;
   return cartItem;
+}
+//refactor these 2 factories
+const orderFactory = (order) => {
+  let orderItem = document.createElement('div');
+  let preFormattedDate = new Date(order.created_at)
+
+  let orderDate = (preFormattedDate.getMonth() + 1)
+                  + '/' + preFormattedDate.getDate()
+                  + '/' + preFormattedDate.getFullYear()
+                  + ' at ' + preFormattedDate.getHours()
+                  + ':' + preFormattedDate.getMinutes();
+
+  orderItem.className = 'cart-item';
+  orderItem.id = `order-item-${order.id}`;
+  orderItem.innerHTML = `
+    <p class='cart-item-title'>
+      <span>Total:</span>
+      <i class='icon ion-social-usd'></i>
+      ${order.totalPrice}
+    </p>
+    <p class='order-item-date'>
+      <span>Ordered On:</span>
+      ${orderDate}
+    </p>
+  `;
+  return orderItem;
 }
 
 
@@ -207,6 +234,20 @@ const getInventoryItems = () => {
 
 
 const openHistory = () => {
+  closeCart();
+  fetch('/api/v1/orders')
+    .then(result => result.json())
+    .then(orders => {
+      console.log('ORDERS FOUND:', orders);
+      
+      $('.history-orders-wrapper').children().remove();
+      orders.forEach(order => {
+        $('.history-orders-wrapper').append(orderFactory(order))
+      })
+    })
+    .catch(error => { console.log('Error getting orders:', error) })
+
+
   document.getElementById('history-pane').style.width = '600px';
 }
 
@@ -220,7 +261,7 @@ const clearCart = () => {
 }
 
 const openCart = () => {
-
+  closeHistory();
   let currentCart = getFromLocal('abcart');
 
   $('.cart-items-wrapper').children().remove();
