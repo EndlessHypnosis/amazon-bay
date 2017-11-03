@@ -278,7 +278,7 @@ h1 {
   color: #FFFFFF;
 }
 
-.cart-price-total span {
+.cart-price-total span:first-child {
   font-weight: bold;
   font-size: 22px;
   color: #98abb9;
@@ -331,11 +331,23 @@ h1 {
 }
 
 
+.cart-price-val {
+  color: #ffffff;
+}
+
+
 
 
 .end {
 
 }
+
+
+
+
+
+
+
 
 
 

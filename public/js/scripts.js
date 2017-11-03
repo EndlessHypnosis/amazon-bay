@@ -47,13 +47,14 @@ const addItemToCart = (cartBtn) => {
       currentCart.push(itemToAdd);
       addToLocal(currentCart, 'abcart');
       console.log('added item to local', itemToAdd.id);
+      // alert(`Added ${itemToAdd.title} to your cart!`);
 
       //disable button
       // $(cartBtn).prop('disabled', true);
       
     } else {
       console.log('Error: Cannot add Duplicate Item:', itemToAdd.id);
-      alert(`Error: Cannot add Duplicate Item: ${itemToAdd.title}`)
+      alert(`Cannot add Duplicate Item: ${itemToAdd.title}`)
     }
     
   }
@@ -70,8 +71,40 @@ const calcCartTotal = () => {
       return acum;
     }, 0.0);
   }
-
   $('.cart-price-val').text(totalPrice.toFixed(2))
+}
+
+const cartCheckout = () => {
+
+  let currentCart = getFromLocal('abcart');
+
+  if (currentCart.length === 0) {
+    alert('Cannot checkout without any items!');
+    return;
+  }
+
+  fetch('/api/v1/orders', {
+    method: 'post',
+    headers: {
+      'Accept': 'application/json, text/plain, */*',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ orderTotal: $('.cart-price-val').text() })
+  })
+    .then(data => data.json())
+    .then(response => {
+      if (response.status == 201) {
+
+        console.log('Order Created:', response);
+        alert(`Thanks for the order totaling: ${response.totalPrice} !!!`)
+        addToLocal([], 'abcart');
+        closeCart();
+      }
+      if (response.status == 422) {
+        alert(response.error);
+      }
+    })
+    .catch(error => console.log('Error Creating Order', error));
 
 
 }
